@@ -1,0 +1,43 @@
+{
+  "name": "find-like-deps",
+  "version": "1.0.0",
+  "description": "Takes a dependency as input and finds similar dependencies in your project based on description and keywords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Trey Shugart <treshugart@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "double-metaphone": "^1.0.2",
+    "fast-levenshtein": "^2.0.6",
+    "flowde": "^1.0.0",
+    "indent-string": "^3.2.0",
+    "meow": "^5.0.0",
+    "stemmer": "^1.0.2",
+    "strip-indent": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@babel/preset-stage-0": "^7.0.0-beta.46",
+    "@babel/register": "^7.0.0-beta.46",
+    "ava": "1.0.0-beta.4",
+    "flow-bin": "^0.70.0",
+    "prettier": "^1.12.1"
+  },
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-flow",
+          ["@babel/preset-stage-0", { "decoratorsLegacy": true }]
+        ]
+      }
+    },
+    "require": [
+      "@babel/register"
+    ]
+  }
+}
